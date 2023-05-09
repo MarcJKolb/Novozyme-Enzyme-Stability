@@ -18,6 +18,7 @@ Four initial features:
 <br>
 The first task in order to clean this data is to determine the inconsistencies involving the entries for pH. There are 286 missing values. Based on the total number of values involved, I felt comfortable just eliminating those instances that had no corresponding pH measurement.
 <br>
+
 ![Image](https://github.com/MarcJKolb/Novozyme-Enzyme-Stability/blob/master/Images/readme02.png)
 <br>
 Another issue involving pH was the maximum value for pH: 64.9. Values of pH typically range between 0 and 14.
@@ -37,23 +38,29 @@ Five additional features:
 - `gravy` - Gravy
 - `aromaticity` - Aromaticity
 <br>
+
 ![Image](https://github.com/MarcJKolb/Novozyme-Enzyme-Stability/blob/master/Images/readme05.png)
 <br>
 The Pearson Corrolation Matrix is as follows:
+<br>
+
 ![Image](https://github.com/MarcJKolb/Novozyme-Enzyme-Stability/blob/master/Images/readme06.png)
 
 ## Picking a Machine Learning Model
 In order to narrow down the type of model to use, I used a python library called 'lazypredict'. After dividing the data into seperate training and test sets, I tested and graphed the different untuned models based on their R^2^ metric:
 <br>
+
 ![Image](https://github.com/MarcJKolb/Novozyme-Enzyme-Stability/blob/master/Images/readme07.png)
 <br>
 After tuning the top three models, I found that LightGBM provided a marginally better test score than the HGBR Tree model:
 <br>
+
 ![Image](https://github.com/MarcJKolb/Novozyme-Enzyme-Stability/blob/master/Images/readme08.png)
 <br>
 
 ## Results
 The resultant model's Spearman Correlation Coefficient to the unseen Kaggle data is below:
 <br>
+
 ![Image](https://github.com/MarcJKolb/Novozyme-Enzyme-Stability/blob/master/Images/readme09.png)
 <br>
